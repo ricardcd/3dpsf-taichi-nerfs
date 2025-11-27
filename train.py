@@ -25,7 +25,10 @@ from datasets import dataset_dict
 warnings.filterwarnings("ignore")
 
 def taichi_init(args):
-    taichi_init_args = {"arch": ti.cuda,}
+    if torch.cuda.is_available():
+        taichi_init_args = {"arch": ti.cuda,}
+    else:
+        taichi_init_args = {"arch": ti.cpu,}
     if args.half_opt:
         taichi_init_args["half2_vectorization"] = True
 
@@ -46,7 +49,6 @@ def main():
 
     if hparams.gpu != -1:
         os.environ['CUDA_VISIBLE_DEVICES'] = str(hparams.gpu)
-
 
     val_dir = hparams.out_dir
 
