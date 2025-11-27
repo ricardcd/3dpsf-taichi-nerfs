@@ -132,6 +132,7 @@ def get_opts(prefix_args=None):
     parser.add_argument('--deployment_model_path', type=str, default="./")
 
     # New parameters (3dpsf)
-    parser.add_argument('--out_dir', '-o', type=str, default="./results", help='Output directory')    
+    parser.add_argument('--out_dir', '-o', type=str, default="./results", help='Output directory')
+    parser.add_argument('--render_eval_inds', type=int, nargs='+', help='Indices of images to render for evaluation')
 
     return parser.parse_args(prefix_args)

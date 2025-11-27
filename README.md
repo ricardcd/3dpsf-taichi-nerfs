@@ -1,4 +1,4 @@
-# Taichi NeRFs
+# Taichi NeRFs (fork for the 3DPSF lab session 5)
 
 A PyTorch + Taichi implementation of [instant-ngp](https://nvlabs.github.io/instant-ngp/assets/mueller2022instant.pdf) NeRF training pipeline. For more details about modeling, please checkout this [article on our blog site](https://docs.taichi-lang.org/blog/taichi-instant-ngp).
 

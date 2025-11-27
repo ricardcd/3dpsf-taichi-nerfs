@@ -272,8 +272,8 @@ def main():
             val_ssim.reset()
 
             # save test image to disk
-            if test_step == 0:
-                test_idx = test_data['img_idxs']
+            test_idx = test_data['img_idxs']
+            if test_idx in hparams.render_eval_inds:                
                 # TODO: get rid of this
                 rgb_pred = rearrange(
                     results['rgb'].cpu().numpy(),
