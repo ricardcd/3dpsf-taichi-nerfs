@@ -131,4 +131,7 @@ def get_opts(prefix_args=None):
     parser.add_argument('--deployment', action='store_true', default=False)
     parser.add_argument('--deployment_model_path', type=str, default="./")
 
+    # New parameters (3dpsf)
+    parser.add_argument('--out_dir', '-o', type=str, default="./results", help='Output directory')    
+
     return parser.parse_args(prefix_args)

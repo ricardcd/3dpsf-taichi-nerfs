@@ -48,7 +48,7 @@ def main():
         os.environ['CUDA_VISIBLE_DEVICES'] = str(hparams.gpu)
 
 
-    val_dir = 'results/'
+    val_dir = hparams.out_dir
 
     # rendering configuration
     exp_step_factor = 1 / 256 if hparams.scale > 0.5 else 0.
