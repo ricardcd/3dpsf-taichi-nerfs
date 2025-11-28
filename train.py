@@ -74,8 +74,6 @@ def main():
         split='test',
         downsample=hparams.downsample,
     ).to(device)
-    # TODO: add test set rendering code
-
 
     # metric
     val_psnr = PeakSignalNoiseRatio(
